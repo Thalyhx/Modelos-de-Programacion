@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="U_HUbyeRM6_6pzh_-R5M">
+    <mxGraphModel dx="1373" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;classDiagram\n    class Main {\n        +main(args: String[]) void\n    }\n\n    class Tarifa {\n        &lt;&lt;abstract&gt;&gt;\n        +calcTarifa(distancia: int) double\n    }\n    \n    class TarifaTaxi {\n        +calcTarifa(distancia: int) double\n    }\n    \n    class DecoratorTarifa {\n        &lt;&lt;abstract&gt;&gt;\n        #tarifa: Tarifa\n        #recargo: double\n        +calcTarifa(distancia: int) double\n    }\n    \n    class TarifaFestivo {\n        +calcTarifa(distancia: int) double\n    }\n    \n    class TarifaHora {\n        -hora: int\n        +calcTarifa(distancia: int) double\n    }\n    \n    class TarifaLugar {\n        -lugar: String\n        +calcTarifa(distancia: int) double\n    }\n\n    %% Relación del Cliente / Main\n    Main ..&gt; Tarifa : usa\n\n    %% Jerarquía de Herencia y Composición\n    Tarifa &lt;|-- TarifaTaxi\n    Tarifa &lt;|-- DecoratorTarifa\n    \n    DecoratorTarifa o-- Tarifa : compone / envuelve\n    \n    DecoratorTarifa &lt;|-- TarifaFestivo\n    DecoratorTarifa &lt;|-- TarifaHora\n    DecoratorTarifa &lt;|-- TarifaLugar&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="dndm30_9_kyhCTq47hjr-33">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry height="246" width="1020" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Main&lt;/b&gt;" mermaidId="n:Main" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;Main&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-34">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;whiteSpace=wrap;fillColor=default;strokeColor=default;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;spacingTop=24;" vertex="1">
+            <mxGeometry height="120" width="224" x="257" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-35" parent="dndm30_9_kyhCTq47hjr-34" style="line;fillColor=default;rotatable=0;points=[];strokeColor=default;align=center;verticalAlign=middle;spacingTop=24;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;strokeWidth=1;" vertex="1">
+          <mxGeometry height="24" width="224" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-36" parent="dndm30_9_kyhCTq47hjr-34" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;" value="+main(args: String[]) void" vertex="1">
+          <mxGeometry height="24" width="224" y="84" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;Tarifa&lt;/b&gt;" mermaidId="n:Tarifa" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;Tarifa&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-37">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
+            <mxGeometry height="144" width="300" x="219" y="224" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-38" parent="dndm30_9_kyhCTq47hjr-37" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;movable=0;resizable=0;rotatable=0;points=[];fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="«abstract»" vertex="1">
+          <mxGeometry height="24" width="300" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-39" parent="dndm30_9_kyhCTq47hjr-37" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
+          <mxGeometry height="24" width="300" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-40" parent="dndm30_9_kyhCTq47hjr-37" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="300" y="108" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;TarifaTaxi&lt;/b&gt;" mermaidId="n:TarifaTaxi" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;TarifaTaxi&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-41">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;whiteSpace=wrap;fillColor=default;strokeColor=default;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;spacingTop=24;" vertex="1">
+            <mxGeometry height="120" width="297" x="221" y="440" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-42" parent="dndm30_9_kyhCTq47hjr-41" style="line;fillColor=default;rotatable=0;points=[];strokeColor=default;align=center;verticalAlign=middle;spacingTop=24;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;strokeWidth=1;" vertex="1">
+          <mxGeometry height="24" width="297" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-43" parent="dndm30_9_kyhCTq47hjr-41" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="297" y="84" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;DecoratorTarifa&lt;/b&gt;" mermaidId="n:DecoratorTarifa" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;DecoratorTarifa&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-44">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=72;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;spacingTop=24;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" vertex="1">
+            <mxGeometry height="192" width="318" x="550" y="442" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-45" parent="dndm30_9_kyhCTq47hjr-44" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;movable=0;resizable=0;rotatable=0;points=[];fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="«abstract»" vertex="1">
+          <mxGeometry height="24" width="318" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-46" parent="dndm30_9_kyhCTq47hjr-44" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="#tarifa: Tarifa" vertex="1">
+          <mxGeometry height="24" width="318" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-47" parent="dndm30_9_kyhCTq47hjr-44" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="#recargo: double" vertex="1">
+          <mxGeometry height="24" width="318" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-48" parent="dndm30_9_kyhCTq47hjr-44" style="line;strokeWidth=1;fillColor=none;spacingLeft=3;spacingRight=3;rotatable=0;points=[];strokeColor=inherit;" vertex="1">
+          <mxGeometry height="24" width="318" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-49" parent="dndm30_9_kyhCTq47hjr-44" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="318" y="156" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;TarifaFestivo&lt;/b&gt;" mermaidId="n:TarifaFestivo" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;TarifaFestivo&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-50">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;whiteSpace=wrap;fillColor=default;strokeColor=default;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;spacingTop=24;" vertex="1">
+            <mxGeometry height="120" width="308" x="210" y="697" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-51" parent="dndm30_9_kyhCTq47hjr-50" style="line;fillColor=default;rotatable=0;points=[];strokeColor=default;align=center;verticalAlign=middle;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;spacingTop=24;strokeWidth=1;" vertex="1">
+          <mxGeometry height="24" width="308" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-52" parent="dndm30_9_kyhCTq47hjr-50" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="308" y="84" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;TarifaHora&lt;/b&gt;" mermaidId="n:TarifaHora" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;TarifaHora&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-53">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;whiteSpace=wrap;fillColor=default;strokeColor=default;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;spacingTop=24;" vertex="1">
+            <mxGeometry height="144" width="299" x="559" y="696" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-54" parent="dndm30_9_kyhCTq47hjr-53" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;" value="-hora: int" vertex="1">
+          <mxGeometry height="24" width="299" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-55" parent="dndm30_9_kyhCTq47hjr-53" style="line;fillColor=default;rotatable=0;points=[];strokeColor=default;align=center;verticalAlign=middle;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;spacingTop=24;strokeWidth=1;" vertex="1">
+          <mxGeometry height="24" width="299" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-56" parent="dndm30_9_kyhCTq47hjr-53" style="text;fontSize=16;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);fontStyle=1;horizontal=1;" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="299" y="108" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;b&gt;TarifaLugar&lt;/b&gt;" mermaidId="n:TarifaLugar" mermaidBaseStyle="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;swimlaneFillColor=light-dark(#ECECFF,#1f2020);whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;" mermaidBaseValue="&lt;b&gt;TarifaLugar&lt;/b&gt;" id="dndm30_9_kyhCTq47hjr-57">
+          <mxCell parent="dndm30_9_kyhCTq47hjr-33" style="swimlane;html=1;fontStyle=1;fontSize=16;align=center;verticalAlign=middle;horizontal=1;childLayout=stackLayout;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginTop=12;marginBottom=12;stackSpacing=0;whiteSpace=wrap;fillColor=default;strokeColor=default;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;spacingTop=24;" vertex="1">
+            <mxGeometry height="144" width="302" x="908" y="695" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="dndm30_9_kyhCTq47hjr-58" parent="dndm30_9_kyhCTq47hjr-57" style="text;fontSize=12;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Helvetica;fontColor=default;fontStyle=1;horizontal=1;" value="-lugar: String" vertex="1">
+          <mxGeometry height="24" width="302" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-59" parent="dndm30_9_kyhCTq47hjr-57" style="line;fillColor=default;rotatable=0;points=[];strokeColor=default;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=1;horizontal=1;strokeWidth=1;" vertex="1">
+          <mxGeometry height="24" width="302" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="dndm30_9_kyhCTq47hjr-60" parent="dndm30_9_kyhCTq47hjr-57" style="text;fontSize=12;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=12;spacingBottom=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Helvetica;fontColor=default;fontStyle=1;horizontal=1;" value="+calcTarifa(distancia: int) double" vertex="1">
+          <mxGeometry height="24" width="302" y="108" as="geometry" />
+        </mxCell>
+        <UserObject label="usa" mermaidId="e:Main-&gt;Tarifa#0" mermaidBaseStyle="curved=1;dashed=1;startArrow=none;endArrow=classic;endSize=9;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="usa" id="dndm30_9_kyhCTq47hjr-61">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-34" style="curved=1;dashed=1;startArrow=none;endArrow=classic;endSize=9;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;fixDash=1;rounded=0;" target="dndm30_9_kyhCTq47hjr-37">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Tarifa-&gt;TarifaTaxi#0" mermaidBaseStyle="curved=1;startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.08;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="dndm30_9_kyhCTq47hjr-62">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-37" style="startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;" target="dndm30_9_kyhCTq47hjr-41">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Tarifa-&gt;DecoratorTarifa#0" mermaidBaseStyle="curved=1;startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.52;exitY=1;entryX=0.5188679245283019;entryY=0;curved=1;exitX=0.52;exitY=1;entryX=0.52;entryY=0;" mermaidBaseValue="" id="dndm30_9_kyhCTq47hjr-63">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-37" style="startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.52;entryY=0;rounded=0;exitDx=0;exitDy=0;" target="dndm30_9_kyhCTq47hjr-44">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="compone / envuelve" mermaidId="e:DecoratorTarifa-&gt;Tarifa#0" mermaidBaseStyle="curved=1;startArrow=mermaidDiamond;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.4591194968553459;exitY=0;entryX=0.45666666666666667;entryY=1;curved=1;exitX=0.46;exitY=0;entryX=0.46;entryY=1;" mermaidBaseValue="compone / envuelve" id="dndm30_9_kyhCTq47hjr-64">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-46" style="startArrow=mermaidDiamond;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#ECECFF,#1f2020);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.5;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="dndm30_9_kyhCTq47hjr-37">
+            <mxGeometry relative="1" x="0.4468" y="34" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="990.07" y="538.07" />
+                <mxPoint x="990.07" y="296.07" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DecoratorTarifa-&gt;TarifaFestivo#0" mermaidBaseStyle="curved=1;startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.78;entryX=0.5;entryY=0;" mermaidBaseValue="" id="dndm30_9_kyhCTq47hjr-65">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-44" style="startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.78;entryX=0.5;entryY=0;rounded=0;" target="dndm30_9_kyhCTq47hjr-50">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DecoratorTarifa-&gt;TarifaHora#0" mermaidBaseStyle="curved=1;startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="dndm30_9_kyhCTq47hjr-66">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-44" style="startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="dndm30_9_kyhCTq47hjr-53">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DecoratorTarifa-&gt;TarifaLugar#0" mermaidBaseStyle="curved=1;startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.79;entryX=0.5;entryY=0;" mermaidBaseValue="" id="dndm30_9_kyhCTq47hjr-67">
+          <mxCell edge="1" parent="dndm30_9_kyhCTq47hjr-33" source="dndm30_9_kyhCTq47hjr-44" style="startArrow=mermaidExtension;startSize=17;startFill=0;endArrow=none;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.79;entryX=0.5;entryY=0;rounded=0;" target="dndm30_9_kyhCTq47hjr-57">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
