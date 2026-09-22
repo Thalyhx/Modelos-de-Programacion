@@ -21,6 +21,6 @@ public class Cliente {
         
         Imc calcImc = new Proxy();
         double imc = calcImc.calcularImc(peso, estatura);
-        System.out.println("El imc es: "+imc);
+               System.out.println("El imc es: "+imc);
     }
 }
