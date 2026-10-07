@@ -14,6 +14,7 @@ public abstract class Operacion {
         
         double a = parsear(textoA);
         double b = parsear(textoB);
+        
         if (validar(a,b)){
             double resultado = operar(a,b);
             return resultado;
@@ -27,8 +28,8 @@ public abstract class Operacion {
         double num = Double.parseDouble(mensaje);
         return num;
         }catch(NumberFormatException e)
-        {System.out.println("Error al parsear");}
-        return 0;
+        { throw new IllegalArgumentException("Error al parsear los numeros  ");
+        }
     }
     
     public abstract double operar(double a, double b);
@@ -36,6 +37,5 @@ public abstract class Operacion {
     public boolean validar(double a, double b){
         return true;
      }
-    
 
 }

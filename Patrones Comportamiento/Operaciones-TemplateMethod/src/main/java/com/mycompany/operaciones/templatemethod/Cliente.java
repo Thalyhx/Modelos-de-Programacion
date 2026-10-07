@@ -34,28 +34,39 @@ public class Cliente {
         
         Operacion opSuma = new Suma();
         vista.salida("Resultado de "+a+" + "+b);
+        try{
         double suma = opSuma.templateMethod(a, b);
         vista.salida(String.valueOf(suma));
+        }catch(IllegalArgumentException e){
+        vista.salida("Error: " + e.getMessage());
+        }
         
         Operacion opResta = new Resta();
         vista.salida("Resultado de "+a+" - "+b);
+        try{
         double resta = opResta.templateMethod(a, b);
         vista.salida(String.valueOf(resta));
+        }catch(IllegalArgumentException e){
+            vista.salida("Error: "+e.getMessage());
+        }
         
         Operacion opMultiplicacion = new Multiplicacion();
         vista.salida("Resultado de "+a+" * "+b);
+        try{
         double multiplicacion = opMultiplicacion.templateMethod(a, b);
         vista.salida(String.valueOf(multiplicacion));
+        }catch(IllegalArgumentException e){
+            vista.salida("Error: "+e.getMessage());
+        }
         
         Operacion opDivision = new Division();
         vista.salida("Resultado de "+a+" / "+b);
         try{
         double division = opDivision.templateMethod(a, b);
         vista.salida(String.valueOf(division));
-        }catch(IllegalArgumentException e){System.out.println("Error en la Validacion de los numeros");}
+        }catch(IllegalArgumentException e){
+            vista.salida("Error: "+e.getMessage());
+        }
         
-        
-        
-
     }
 }
