@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package aordenamiento.estrategy.Pruebas;
+package aordenamiento.strategy.Pruebas;
 
-import aordenamiento.estrategy.AlgoritmoOrdenamiento;
-import aordenamiento.estrategy.Contexto;
-import aordenamiento.estrategy.FabricaSimpleEstrategia;
-import aordenamiento.estrategy.InsertionSort;
+import aordenamiento.strategy.AlgoritmoOrdenamiento;
+import aordenamiento.strategy.Contexto;
+import aordenamiento.strategy.FabricaSimpleEstrategia;
+import aordenamiento.strategy.MergeSort;
 import java.util.List;
 
 /**
  *
  * @author natha
  */
-public class ClientePruebaInsertion {
+public class ClientePruebaMerge {
     
      
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class ClientePruebaInsertion {
         FabricaSimpleEstrategia fabrica = new FabricaSimpleEstrategia();
         List<Integer> lista = fabrica.listaAleatoria(tam, 1, 500);
 
-        AlgoritmoOrdenamiento algoritmo = new InsertionSort(); 
+        AlgoritmoOrdenamiento algoritmo = new MergeSort(); 
 
         Contexto contexto = new Contexto(algoritmo);
         List<Integer> listaOrdenada = contexto.OrdenarLista(lista);

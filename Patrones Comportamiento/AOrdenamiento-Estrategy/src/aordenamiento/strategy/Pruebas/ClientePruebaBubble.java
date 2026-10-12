@@ -2,21 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package aordenamiento.estrategy.Pruebas;
+package aordenamiento.strategy.Pruebas;
 
-import aordenamiento.estrategy.AlgoritmoOrdenamiento;
-import aordenamiento.estrategy.Contexto;
-import aordenamiento.estrategy.FabricaSimpleEstrategia;
-import aordenamiento.estrategy.HeapSort;
+import aordenamiento.strategy.AlgoritmoOrdenamiento;
+import aordenamiento.strategy.BubbleSort;
+import aordenamiento.strategy.Contexto;
+import aordenamiento.strategy.FabricaSimpleEstrategia;
 import java.util.List;
 
 /**
  *
  * @author natha
  */
-public class ClientePruebaHeap {
+public class ClientePruebaBubble {
     
-     
     public static void main(String[] args) {
         System.out.println("=== PRUEBA DE ALGORITMO DE ORDENAMIENTO ===");
         
@@ -25,7 +24,7 @@ public class ClientePruebaHeap {
         FabricaSimpleEstrategia fabrica = new FabricaSimpleEstrategia();
         List<Integer> lista = fabrica.listaAleatoria(tam, 1, 500);
 
-        AlgoritmoOrdenamiento algoritmo = new HeapSort(); 
+        AlgoritmoOrdenamiento algoritmo = new BubbleSort(); 
 
         Contexto contexto = new Contexto(algoritmo);
         List<Integer> listaOrdenada = contexto.OrdenarLista(lista);
@@ -36,4 +35,5 @@ public class ClientePruebaHeap {
         System.out.println("Lista Ordenada     : " + listaOrdenada);
         
     }
+    
 }
